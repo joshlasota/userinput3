@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewMealCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Meal Cost:"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextMealCost"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMealCost"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:hint="Enter cost"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewTipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Tip Percentage:"
+        android:textSize="18sp"
+        android:layout_below="@id/editTextMealCost"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText" />
+
+    <Spinner
+        android:id="@+id/spinnerTipPercentage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTipPercentage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:entries="@array/tip_percentages"
+        android:minHeight="48dp"
+        android:prompt="@string/select_percentage" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Tip"
+        android:layout_below="@id/spinnerTipPercentage"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
